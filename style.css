@@ -1,3 +1,12 @@
+html{
+  scroll-behavior: smooth;
+}
+main{
+  padding-top: 50px;
+}
+body {
+  background-color: #214467;
+}
 @font-face{
     font-family: 'Nipsey';
     src: url(fonts/nipsey-cufonfonts/Nipsey-d974V.otf);
@@ -11,21 +20,24 @@
     src: url(fonts/Comfortaa-Light.ttf);
 }
 
-body {
-  background-color: #122d48;
-}
 header {
   margin-bottom: 16px; /* space below nav */
 }
 
 #navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  z-index: 1000;
   background: linear-gradient(to right, #7d1c1c, #102d4a 60%);
-  border-radius: 30px;
+  border-radius:0 0 30px 30px;
   height: 50px;
   display: flex;
   align-items: center;
-  gap: 30px; /* horizontal spacing between links */
-  padding: 8px 16px; /* internal spacing instead of empty div */
+  gap: 30px;
+  padding: 0px 16px; 
 }
 #title{
   font-family: Comfortaa;
@@ -65,9 +77,9 @@ header {
   background: linear-gradient(to right, #7d1c1c, #102d4a 60%);
   line-height: 1.8;
   display: flex;
-  align-items: flex-start; /* align items to top */
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 30px; /* horizontal gap between article and image — remove inner spacer div */
+  gap: 30px; 
   padding: 100px;
   margin-bottom: 20px;
   text-align: left;
@@ -79,25 +91,22 @@ header {
 }
 #about img {
   height: 600px;
-  transition: 0.4s;
+
 }
-#about img:hover {
-  scale: 1.03;
-  transition: 0.5s;
-}
+
 
 #about h1 {
   font-size: 80px;
   font-family: selino;
-  margin: 0; /* remove default margin */
+  margin: 0; 
 }
 
 #career {
   background: linear-gradient(to right, #7d1c1c, #102d4a 60%);
   line-height: 1.8;
-  align-items: flex-start; /* align items to top */
+  align-items: flex-start; 
   justify-content: space-between;
-  gap: 30px; /* horizontal gap between article and image — remove inner spacer div */
+  gap: 30px; 
   padding: 100px;
   text-align: left;
   font-size: 20px;
@@ -124,12 +133,87 @@ header {
   color: aliceblue;
 }
 .text-content {
-  transition: 0.2s;
+
   display: flex;
   flex-direction: column;
-  gap: 20px; /* space between h1 and article */
+  gap: 20px; 
 }
-.text-content:hover {
-  scale: 1.01;
-  transition: 0.3s;
+
+
+
+@media screen and (max-width: 768px) {
+
+  #navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 16px;
+    gap: 15px;
+  }
+
+  #title {
+    text-align: center;
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+  /* Home section */
+  #home {
+    height: auto;
+  }
+
+  #home img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* About section */
+  #about {
+    flex-direction: column;
+    padding: 16px;
+    gap: 20px;
+  }
+
+  #about img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+  }
+
+  /* Career section */
+  #career {
+    padding: 16px;
+  }
+
+  .text-content {
+    width: 100%;
+  }
+
+  article {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}
+
+/* For very small screens */
+@media screen and (max-width: 480px) {
+  #navbar {
+    padding: 12px;
+  }
+
+  #navbar a {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  article {
+    font-size: 14px;
+  }
 }
