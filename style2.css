@@ -1,0 +1,117 @@
+@font-face{
+    font-family: 'Nipsey';
+    src: url(fonts/nipsey-cufonfonts/Nipsey-d974V.otf);
+}
+@font-face{
+    font-family: 'selino';
+    src: url(fonts/selino-cufonfonts/Selino-mL0Lj.otf);
+}
+
+
+body {
+  background-color: #122d48;
+}
+header {
+  margin-bottom: 16px; /* space below nav */
+}
+
+#navbar {
+  background: linear-gradient(to right, #7d1c1c, #102d4a 60%);
+  border-radius: 30px;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px; /* horizontal spacing between links */
+  padding: 8px 16px; /* internal spacing instead of empty div */
+}
+
+#navbar a {
+  transition: 0.5s;
+  font-family: Comfortaa;
+  padding-right: 20px;
+  padding-top: 15px;
+  text-decoration: none;
+  color: aliceblue;
+}
+#navbar a:hover {
+  scale: 1.4;
+  transition: 0.4s;
+}
+
+#title_pic {
+  background: linear-gradient(to right, #7d1c1c, #102d4a 60%);
+  height: 500px;
+  border-radius: 30px;
+  background-color: #122d48;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 102px;
+  margin-bottom: 20px;
+}
+#title_pic img {
+  height: 500px;
+}
+
+#about {
+  background: linear-gradient(to right, #7d1c1c, #102d4a 60%);
+  line-height: 1.8;
+  display: flex;
+  align-items: flex-start; /* align items to top */
+  justify-content: space-between;
+  gap: 30px; /* horizontal gap between article and image — remove inner spacer div */
+  padding: 100px;
+  margin-bottom: 20px;
+  text-align: left;
+  font-size: 20px;
+  font-family: Comfortaa;
+  color: aliceblue;
+  border-radius: 30px;
+  background-color: #122d48;
+}
+#about img {
+  height: 600px;
+  transition: 0.4s;
+}
+#about img:hover {
+  scale: 1.03;
+  transition: 0.5s;
+}
+
+#about h1 {
+  font-size: 80px;
+  font-family: selino;
+  margin: 0; /* remove default margin */
+}
+
+#career {
+  background: linear-gradient(to right, #7d1c1c, #102d4a 60%);
+  line-height: 1.8;
+  align-items: flex-start; /* align items to top */
+  justify-content: space-between;
+  gap: 30px; /* horizontal gap between article and image — remove inner spacer div */
+  padding: 100px;
+  text-align: left;
+  font-size: 20px;
+  font-family: Comfortaa;
+  color: aliceblue;
+  border-radius: 30px;
+  background-color: #122d48;
+}
+#career h1{
+    font-size: 80px;
+    font-family: selino;
+}
+#career h2{
+    font-family: selino;
+}
+.text-content {
+  transition: 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* space between h1 and article */
+}
+.text-content:hover {
+  scale: 1.01;
+  transition: 0.3s;
+}
